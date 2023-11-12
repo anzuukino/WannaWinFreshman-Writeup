@@ -34,6 +34,7 @@ thành
 - Cách này sẽ đọc hết tất cả các file trong thư mục hiện tại và tìm được flag
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/2c578c66-f98c-43dd-a306-e629ab3f7137)
 - Flag: **W1{U_are_master_in_SSTI}**
+- Ngoài lề: ~~ Thật ra thì còn 1 cách bypass tà đạo nữa mà sau này mình sẽ viết 1 bài riêng về cái này mình nghĩ cách này bypass cũng kha khá <(") ~~
 # Bài 3 Solite:
 - ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/5d20fa22-0fc9-4f4c-8039-7de1d61b594f)
 - Bài này mình khá tiếc vì mình đọc không kỉ filter nên mình không làm được
