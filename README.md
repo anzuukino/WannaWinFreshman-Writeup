@@ -110,6 +110,58 @@ for i in range(1,10000):
 print("Here is your flag:",flag)
 ```
 - Flag: **W1{I_th1nk_u_r_so_lite^_^}**
+# Bài 4 Differences:
+![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/988dc17d-907d-4b7b-a897-9d524e8a17ab)
+- Flag ngay ở trong file
+- Flag: **W1{SaKur4_s0_b34uTiFuL_RI9ht?????}**
+# Bài 5 Free Flag:
+- Đọc file pcapng ta tìm được source và key
+```py
+import base64
+
+BANNER = """ ___       __   ________  ________   ________   ________  ___       __     _____  ________      
+|\  \     |\  \|\   __  \|\   ___  \|\   ___  \|\   __  \|\  \     |\  \  / __  \|\   ___  \    
+\ \  \    \ \  \ \  \|\  \ \  \\\ \  \ \  \\\ \  \ \  \|\  \ \  \    \ \  \|\/_|\  \ \  \\\ \  \   
+ \ \  \  __\ \  \ \   __  \ \  \\\ \  \ \  \\\ \  \ \   __  \ \  \  __\ \  \|/ \ \  \ \  \\\ \  \  
+  \ \  \|\__\_\  \ \  \ \  \ \  \\\ \  \ \  \\\ \  \ \  \ \  \ \  \|\__\_\  \   \ \  \ \  \\\ \  \ 
+   \ \____________\ \__\ \__\ \__\\\ \__\ \__\\\ \__\ \__\ \__\ \____________\   \ \__\ \__\\\ \__\\
+    \|____________|\|__|\|__|\|__| \|__|\|__| \|__|\|__|\|__|\|____________|    \|__|\|__| \|__|
+"""
+
+KEY = bytes.fromhex('deadbeef')
+
+def encryptSecret(secret):
+    lst_byte = []
+    for i in range(len(secret)):
+        enc_byte = ord(secret[i]) ^ KEY[i % len(KEY)]
+        lst_byte.append(enc_byte.to_bytes(1, 'big'))
+    
+    return base64.b64encode(b''.join([_ for _ in lst_byte])).decode()
+
+if __name__=='__main__':
+    print(BANNER)
+    secret = input("> Please give me your secret: ")
+    print("\n> Here is your encrypted secret:", encryptSecret(secret)
+```
+
+![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/14a5404c-0f1f-4983-927e-98dd9a82456c)
+- Decrypt lại ta sẽ có flag
+```py
+import base64
+
+KEY = bytes.fromhex('deadbeef')
+
+def decryptSecret(encrypted_secret):
+    encrypted_bytes = base64.b64decode(encrypted_secret.encode())
+    decrypted_bytes = [encrypted_bytes[i] ^ KEY[i % len(KEY)] for i in range(len(encrypted_bytes))]
+    decrypted_text = ''.join([chr(byte) for byte in decrypted_bytes])
+    return decrypted_text
+
+secret = "iZzFsKme0oOdndOqgdnxsKmZ0KG/2o+hgdA="
+
+print(decryptSecret(secret))
+```
+- Flag: **W1{_w3llC0mE_tO_w4nNaw1N_}**
 - ~~**Mấy bài còn lại mình chưa biết làm do dark quá**~~
 
 
