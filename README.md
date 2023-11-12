@@ -79,9 +79,10 @@ print("Success all the names of the tables are:",table_name)
 ```
 - Và tìm ra được tên của các bảng là
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/32f3cf53-f620-48af-8da5-d07cfca0a405)
+
 `Tables: API,flag_c1abd148_acae_40be_a953_eae333f90da0`
 - Bây giờ dựa vào cái trên lấy ra flag từ bảng `flag_c1abd148_acae_40be_a953_eae333f90da0` thôi
-- Scripting của mình
+- Script của mình
 ```py
 import string,requests
 from urllib.parse import quote
