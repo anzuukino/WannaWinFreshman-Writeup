@@ -6,7 +6,7 @@
 - Bài này mới vào thì mình nghĩ đến LFI với filter base64 nhưng khổ nổi là nó chặn ngay chữ php, data, file nên mình không thể chuyển qua base64 được
 - Sau gần 30 phút - 1 tiếng thì mình tìm được một bài viết dưới đây [LINK](https://trustfoundry.net/2018/12/20/bypassing-wafs-with-json-unicode-escape-sequences/)
 - ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/c7280b09-24af-47b3-9a0e-e82ed1894471)
-- Cơ bản là json_decode nó sẽ decode luôn unicode trong biểu diễn hex vì vậy mình chỉnh lại cái payload của mình từ 
+- Cơ bản là json_decode nó sẽ decode luôn unicode trong biểu diễn hex thành chữ cái vì vậy mình chỉnh lại cái payload của mình từ 
 `php://filter/convert.base64-encode/resource=/flag`
 thành
 `\u0070hp://filter/convert.base64-encode/resource=/flag`
