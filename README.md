@@ -17,7 +17,7 @@ thành
 # Bài 2 Namename:
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/d8bc1de3-0f9a-45ff-9878-141cd0df45ad)
 - Bài này cho 1 đường link và không cho thêm gì khác sau khi xem source của web này thì thấy có 1 đường dẫn là `/wannaw1n`
--[image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/c1b22bdc-3266-495f-b6e0-a7edcd95eef0)
+![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/c1b22bdc-3266-495f-b6e0-a7edcd95eef0)
 - Sau khi đi tới đường dẫn /wannaw1n mình nhận ra ngay đây là SSTI jinja2 ( Mình sẽ nói về rõ cách SSTI này lần sau :v)
 - Mình ném ngay payload của mình vào thử xem RCE được không
 - Payload : `{{().__class__.__base__.__subclasses__()[279]('ls',shell=1,stdout=-1).communicate()}}`
