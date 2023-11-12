@@ -115,6 +115,8 @@ print("Here is your flag:",flag)
 - Flag ngay ở trong file
 - Flag: **W1{SaKur4_s0_b34uTiFuL_RI9ht?????}**
 # Bài 5 Free Flag:
+![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/85e6ce14-9571-4711-a888-4b9ad84d0ca7)
+
 - Đọc file pcapng ta tìm được source và key
 ```py
 import base64
