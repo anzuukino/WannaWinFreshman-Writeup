@@ -13,7 +13,7 @@ thành
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/463ea634-efa7-4c42-b0d9-92341d335d5b)
 - Decode base64 và ra flag
 - Flag: **W1{w3lc0m3_w3b_w4rrj0rs}**
-- ~~Funfact: Payload mình làm ra bài này là encode gần như tất cả các ký tự thành dạng unicode biểu diễn hex làm mình tốn rất nhiều thời gian <(")~~
+- ~~Funfact: Payload mình làm ra bài này là encode gần như tất cả các ký tự thành dạng unicode làm mình tốn rất nhiều thời gian <(")~~
 # Bài 2 Namename:
 ![image](https://github.com/anzuukino/WannaWinFreshman-Writeup/assets/86243871/d8bc1de3-0f9a-45ff-9878-141cd0df45ad)
 - Bài này cho 1 đường link và không cho thêm gì khác sau khi xem source của web này thì thấy có 1 đường dẫn là `/wannaw1n`
